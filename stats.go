@@ -1,3 +1,4 @@
+// Package stats implements simple statistical functions.
 package stats
 
 import (
