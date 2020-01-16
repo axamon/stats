@@ -6,7 +6,7 @@ import (
 	"github.com/axamon/stats"
 )
 
-func ExampleQ_Quartile() {
+func ExampleQuartile_Find() {
 
 	slice := []float64{12, 2, 3, 10, 5, 7, 8, 9, 9, 9, 3, 1}
 
