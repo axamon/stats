@@ -1,21 +1,21 @@
 package stats
 
-// Q indicates the Quartile to use.
-type Q int
+// Quartile indicates the Quartile to use.
+type Quartile int
 
 // Quartiles
 const (
-	Q1 Q = iota + 1
+	Q1 Quartile = iota + 1
 	Q2
 	Q3
 )
 
-// P indicates the Percentile to use.
-type P float64
+// Percentile indicates the Percentile to use.
+type Percentile float64
 
 // Percentiles
 const (
-	P01 P = iota + 1
+	P01 Percentile = iota + 1
 	P02
 	P03
 	P04

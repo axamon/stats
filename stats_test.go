@@ -10,9 +10,9 @@ func ExampleQ_Quartile() {
 
 	slice := []float64{12, 2, 3, 10, 5, 7, 8, 9, 9, 9, 3, 1}
 
-	p1 := stats.Q1.Quartile(slice)
-	p2 := stats.Q2.Quartile(slice)
-	p3 := stats.Q3.Quartile(slice)
+	p1 := stats.Q1.Find(slice)
+	p2 := stats.Q2.Find(slice)
+	p3 := stats.Q3.Find(slice)
 
 	fmt.Println(p1)
 	fmt.Println(p2)
@@ -37,11 +37,11 @@ func ExampleInterQuartileRange() {
 func ExamplePercentile() {
 	slice := []float64{1, 2, 3, 3, 5, 7, 8, 9, 9, 9, 10, 12}
 
-	p01 := stats.Percentile(slice, 0.01)
-	p10 := stats.Percentile(slice, 0.1)
-	p50 := stats.Percentile(slice, 0.5)
-	p90 := stats.Percentile(slice, 0.9)
-	p99 := stats.Percentile(slice, 0.99)
+	p01 := stats.FindPercentile(slice, 0.01)
+	p10 := stats.FindPercentile(slice, 0.1)
+	p50 := stats.FindPercentile(slice, 0.5)
+	p90 := stats.FindPercentile(slice, 0.9)
+	p99 := stats.FindPercentile(slice, 0.99)
 
 	fmt.Println(p01)
 	fmt.Println(p10)
@@ -56,11 +56,11 @@ func ExamplePercentile() {
 	// 12
 }
 
-func ExampleP_Percentile() {
+func ExamplePercentile_Find() {
 	slice := []float64{12, 2, 8, 3, 9, 7, 3, 9, 5, 9, 10, 1}
 
-	r50 := stats.P50.Percentile(slice)
-	r99 := stats.P99.Percentile(slice)
+	r50 := stats.P50.Find(slice)
+	r99 := stats.P99.Find(slice)
 
 	fmt.Println(r50)
 	fmt.Println(r99)
